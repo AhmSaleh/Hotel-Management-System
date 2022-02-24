@@ -14,8 +14,8 @@ namespace HotelManagmentRefactored.Entites
         public int ID { get; set; }
 
         //[first_name] [nvarchar](50) NOT NULL,
-        [MaxLength(50)]
-        public string first_name { get; set; }
+        [MaxLength(50), Required]
+        public string? first_name { get; set; }
 
         //[last_name] [nvarchar] (50) NOT NULL,
         [MaxLength(50)]
