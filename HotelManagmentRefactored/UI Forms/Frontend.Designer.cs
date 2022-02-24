@@ -31,7 +31,15 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnNewReservation = new System.Windows.Forms.Button();
+            this.btnEditReservation = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.cbReservations = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnFoodMenu = new System.Windows.Forms.Button();
+            this.btnFinalizeBtn = new System.Windows.Forms.Button();
             this.btnFoodAndMenu = new System.Windows.Forms.Button();
             this.cbSupplyStatus = new System.Windows.Forms.CheckBox();
             this.cbSnedSms = new System.Windows.Forms.CheckBox();
@@ -78,26 +86,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnFinalizeBtn = new System.Windows.Forms.Button();
-            this.btnFoodMenu = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.cbReservations = new System.Windows.Forms.ComboBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEditReservation = new System.Windows.Forms.Button();
-            this.btnNewReservation = new System.Windows.Forms.Button();
+            this.dataGridViewSearchResults = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.gridViewResTotal = new System.Windows.Forms.DataGridView();
-            this.label21 = new System.Windows.Forms.Label();
-            this.roomOccupiedListBox = new System.Windows.Forms.ListBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label23 = new System.Windows.Forms.Label();
             this.roomReservedListBox = new System.Windows.Forms.ListBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.roomOccupiedListBox = new System.Windows.Forms.ListBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -105,9 +106,10 @@
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchResults)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewResTotal)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -149,6 +151,65 @@
             this.panel3.Size = new System.Drawing.Size(375, 548);
             this.panel3.TabIndex = 3;
             // 
+            // btnNewReservation
+            // 
+            this.btnNewReservation.ForeColor = System.Drawing.Color.Teal;
+            this.btnNewReservation.Location = new System.Drawing.Point(22, 503);
+            this.btnNewReservation.Name = "btnNewReservation";
+            this.btnNewReservation.Size = new System.Drawing.Size(328, 29);
+            this.btnNewReservation.TabIndex = 52;
+            this.btnNewReservation.Text = "New reservation";
+            this.btnNewReservation.UseVisualStyleBackColor = true;
+            // 
+            // btnEditReservation
+            // 
+            this.btnEditReservation.ForeColor = System.Drawing.Color.Teal;
+            this.btnEditReservation.Location = new System.Drawing.Point(22, 452);
+            this.btnEditReservation.Name = "btnEditReservation";
+            this.btnEditReservation.Size = new System.Drawing.Size(328, 29);
+            this.btnEditReservation.TabIndex = 51;
+            this.btnEditReservation.Text = "Edit existing Reservation";
+            this.btnEditReservation.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelete.Location = new System.Drawing.Point(22, 401);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(328, 29);
+            this.btnDelete.TabIndex = 50;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.ForeColor = System.Drawing.Color.Teal;
+            this.btnUpdate.Location = new System.Drawing.Point(22, 350);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(328, 29);
+            this.btnUpdate.TabIndex = 48;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(32, 22);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(174, 20);
+            this.label19.TabIndex = 49;
+            this.label19.Text = "Select reservation to edit";
+            // 
+            // cbReservations
+            // 
+            this.cbReservations.FormattingEnabled = true;
+            this.cbReservations.Items.AddRange(new object[] {
+            "[ID]    [NAME]    [PHONE NUMBER]"});
+            this.cbReservations.Location = new System.Drawing.Point(29, 45);
+            this.cbReservations.Name = "cbReservations";
+            this.cbReservations.Size = new System.Drawing.Size(321, 28);
+            this.cbReservations.TabIndex = 48;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
@@ -174,6 +235,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(375, 548);
             this.panel2.TabIndex = 3;
+            // 
+            // btnFoodMenu
+            // 
+            this.btnFoodMenu.ForeColor = System.Drawing.Color.Teal;
+            this.btnFoodMenu.Location = new System.Drawing.Point(29, 509);
+            this.btnFoodMenu.Name = "btnFoodMenu";
+            this.btnFoodMenu.Size = new System.Drawing.Size(328, 29);
+            this.btnFoodMenu.TabIndex = 47;
+            this.btnFoodMenu.Text = "Food and Menu";
+            this.btnFoodMenu.UseVisualStyleBackColor = true;
+            // 
+            // btnFinalizeBtn
+            // 
+            this.btnFinalizeBtn.ForeColor = System.Drawing.Color.Teal;
+            this.btnFinalizeBtn.Location = new System.Drawing.Point(29, 468);
+            this.btnFinalizeBtn.Name = "btnFinalizeBtn";
+            this.btnFinalizeBtn.Size = new System.Drawing.Size(328, 29);
+            this.btnFinalizeBtn.TabIndex = 46;
+            this.btnFinalizeBtn.Text = "Finalize Bill";
+            this.btnFinalizeBtn.UseVisualStyleBackColor = true;
             // 
             // btnFoodAndMenu
             // 
@@ -217,7 +298,6 @@
             this.cbCheckIn.TabIndex = 41;
             this.cbCheckIn.Text = "Check in?";
             this.cbCheckIn.UseVisualStyleBackColor = true;
-            this.cbCheckIn.CheckedChanged += new System.EventHandler(this.cbCleaning_CheckedChanged);
             // 
             // label18
             // 
@@ -762,6 +842,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridViewSearchResults);
             this.tabPage2.Controls.Add(this.btnSearch);
             this.tabPage2.Controls.Add(this.tbSearch);
             this.tabPage2.Controls.Add(this.label20);
@@ -773,6 +854,42 @@
             this.tabPage2.Text = "Universal Search";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewSearchResults
+            // 
+            this.dataGridViewSearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSearchResults.Location = new System.Drawing.Point(19, 78);
+            this.dataGridViewSearchResults.Name = "dataGridViewSearchResults";
+            this.dataGridViewSearchResults.RowHeadersWidth = 51;
+            this.dataGridViewSearchResults.RowTemplate.Height = 29;
+            this.dataGridViewSearchResults.Size = new System.Drawing.Size(1134, 449);
+            this.dataGridViewSearchResults.TabIndex = 20;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(521, 553);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(94, 29);
+            this.btnSearch.TabIndex = 19;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Location = new System.Drawing.Point(189, 29);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(759, 27);
+            this.tbSearch.TabIndex = 18;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(192, 6);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(53, 20);
+            this.label20.TabIndex = 17;
+            this.label20.Text = "Search";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.gridViewResTotal);
@@ -783,6 +900,16 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Reservation Adv. View";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // gridViewResTotal
+            // 
+            this.gridViewResTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewResTotal.Location = new System.Drawing.Point(6, 6);
+            this.gridViewResTotal.Name = "gridViewResTotal";
+            this.gridViewResTotal.RowHeadersWidth = 51;
+            this.gridViewResTotal.RowTemplate.Height = 29;
+            this.gridViewResTotal.Size = new System.Drawing.Size(1163, 576);
+            this.gridViewResTotal.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -800,153 +927,10 @@
             this.tabPage4.Text = "Room Availability";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // btnFinalizeBtn
-            // 
-            this.btnFinalizeBtn.ForeColor = System.Drawing.Color.Teal;
-            this.btnFinalizeBtn.Location = new System.Drawing.Point(29, 468);
-            this.btnFinalizeBtn.Name = "btnFinalizeBtn";
-            this.btnFinalizeBtn.Size = new System.Drawing.Size(328, 29);
-            this.btnFinalizeBtn.TabIndex = 46;
-            this.btnFinalizeBtn.Text = "Finalize Bill";
-            this.btnFinalizeBtn.UseVisualStyleBackColor = true;
-            // 
-            // btnFoodMenu
-            // 
-            this.btnFoodMenu.ForeColor = System.Drawing.Color.Teal;
-            this.btnFoodMenu.Location = new System.Drawing.Point(29, 509);
-            this.btnFoodMenu.Name = "btnFoodMenu";
-            this.btnFoodMenu.Size = new System.Drawing.Size(328, 29);
-            this.btnFoodMenu.TabIndex = 47;
-            this.btnFoodMenu.Text = "Food and Menu";
-            this.btnFoodMenu.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(32, 22);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(174, 20);
-            this.label19.TabIndex = 49;
-            this.label19.Text = "Select reservation to edit";
-            // 
-            // cbReservations
-            // 
-            this.cbReservations.FormattingEnabled = true;
-            this.cbReservations.Items.AddRange(new object[] {
-            "[ID]    [NAME]    [PHONE NUMBER]"});
-            this.cbReservations.Location = new System.Drawing.Point(29, 45);
-            this.cbReservations.Name = "cbReservations";
-            this.cbReservations.Size = new System.Drawing.Size(321, 28);
-            this.cbReservations.TabIndex = 48;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.btnUpdate.Location = new System.Drawing.Point(22, 350);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(328, 29);
-            this.btnUpdate.TabIndex = 48;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.Location = new System.Drawing.Point(22, 401);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(328, 29);
-            this.btnDelete.TabIndex = 50;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnEditReservation
-            // 
-            this.btnEditReservation.ForeColor = System.Drawing.Color.Teal;
-            this.btnEditReservation.Location = new System.Drawing.Point(22, 452);
-            this.btnEditReservation.Name = "btnEditReservation";
-            this.btnEditReservation.Size = new System.Drawing.Size(328, 29);
-            this.btnEditReservation.TabIndex = 51;
-            this.btnEditReservation.Text = "Edit existing Reservation";
-            this.btnEditReservation.UseVisualStyleBackColor = true;
-            // 
-            // btnNewReservation
-            // 
-            this.btnNewReservation.ForeColor = System.Drawing.Color.Teal;
-            this.btnNewReservation.Location = new System.Drawing.Point(22, 503);
-            this.btnNewReservation.Name = "btnNewReservation";
-            this.btnNewReservation.Size = new System.Drawing.Size(328, 29);
-            this.btnNewReservation.TabIndex = 52;
-            this.btnNewReservation.Text = "New reservation";
-            this.btnNewReservation.UseVisualStyleBackColor = true;
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.Enabled = false;
-            this.tbSearch.Location = new System.Drawing.Point(203, 235);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(759, 27);
-            this.tbSearch.TabIndex = 18;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(203, 212);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(53, 20);
-            this.label20.TabIndex = 17;
-            this.label20.Text = "Search";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(535, 385);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(94, 29);
-            this.btnSearch.TabIndex = 19;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // gridViewResTotal
-            // 
-            this.gridViewResTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridViewResTotal.Location = new System.Drawing.Point(6, 6);
-            this.gridViewResTotal.Name = "gridViewResTotal";
-            this.gridViewResTotal.RowHeadersWidth = 51;
-            this.gridViewResTotal.RowTemplate.Height = 29;
-            this.gridViewResTotal.Size = new System.Drawing.Size(1163, 576);
-            this.gridViewResTotal.TabIndex = 0;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(8, 8);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(72, 20);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Occupied";
-            // 
-            // roomOccupiedListBox
-            // 
-            this.roomOccupiedListBox.BackColor = System.Drawing.Color.Silver;
-            this.roomOccupiedListBox.FormattingEnabled = true;
-            this.roomOccupiedListBox.ItemHeight = 20;
-            this.roomOccupiedListBox.Location = new System.Drawing.Point(8, 73);
-            this.roomOccupiedListBox.Name = "roomOccupiedListBox";
-            this.roomOccupiedListBox.Size = new System.Drawing.Size(554, 504);
-            this.roomOccupiedListBox.TabIndex = 1;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(8, 43);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(331, 20);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "Room#| Type  |  ID#   |       Name      |      Phone #";
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(603, 43);
+            this.label23.Location = new System.Drawing.Point(583, 43);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(506, 20);
             this.label23.TabIndex = 5;
@@ -958,9 +942,9 @@
             this.roomReservedListBox.BackColor = System.Drawing.Color.Silver;
             this.roomReservedListBox.FormattingEnabled = true;
             this.roomReservedListBox.ItemHeight = 20;
-            this.roomReservedListBox.Location = new System.Drawing.Point(603, 73);
+            this.roomReservedListBox.Location = new System.Drawing.Point(579, 73);
             this.roomReservedListBox.Name = "roomReservedListBox";
-            this.roomReservedListBox.Size = new System.Drawing.Size(554, 504);
+            this.roomReservedListBox.Size = new System.Drawing.Size(578, 504);
             this.roomReservedListBox.TabIndex = 4;
             // 
             // label24
@@ -971,6 +955,34 @@
             this.label24.Size = new System.Drawing.Size(69, 20);
             this.label24.TabIndex = 3;
             this.label24.Text = "Reserved";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(8, 43);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(331, 20);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Room#| Type  |  ID#   |       Name      |      Phone #";
+            // 
+            // roomOccupiedListBox
+            // 
+            this.roomOccupiedListBox.BackColor = System.Drawing.Color.Silver;
+            this.roomOccupiedListBox.FormattingEnabled = true;
+            this.roomOccupiedListBox.ItemHeight = 20;
+            this.roomOccupiedListBox.Location = new System.Drawing.Point(8, 73);
+            this.roomOccupiedListBox.Name = "roomOccupiedListBox";
+            this.roomOccupiedListBox.Size = new System.Drawing.Size(554, 504);
+            this.roomOccupiedListBox.TabIndex = 1;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(8, 8);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 20);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Occupied";
             // 
             // Frontend
             // 
@@ -992,10 +1004,11 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchResults)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewResTotal)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewResTotal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1072,5 +1085,6 @@
         private Label label22;
         private ListBox roomOccupiedListBox;
         private Label label21;
+        private DataGridView dataGridViewSearchResults;
     }
 }
