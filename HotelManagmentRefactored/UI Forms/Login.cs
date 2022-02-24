@@ -1,4 +1,5 @@
 ﻿using HotelManagmentRefactored.Context;
+using HotelManagmentRefactored.UI_Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,8 @@ namespace HotelManagmentRefactored
                     .ToList();
                 if (confirmCredinFront?.Count > 0)
                 {
-                    MessageBox.Show("Frontend");
+                    Hide();
+                    new Frontend().Show();
                     return;
                 }
             }
@@ -51,7 +53,8 @@ namespace HotelManagmentRefactored
 
                 if (confirmCredinKitch?.Count > 0)
                 {
-                    MessageBox.Show("Kitchen");
+                    Hide();
+                    new ManageKitchenForm().Show();
                     return;
                 }
                 else

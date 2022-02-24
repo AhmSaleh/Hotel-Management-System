@@ -9,11 +9,8 @@ namespace HotelManagmentRefactored.Entites
 {
     internal class kitchen
     {
-        [Key]
-        [MaxLength(50)]
         public string user_name { get; set; }
 
-        [MaxLength(50)]
         public string pass_word { get; set; }
     }
 }

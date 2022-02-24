@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelManagmentRefactored.Migrations
 {
     [DbContext(typeof(LoginManagerContext))]
-    [Migration("20220222192330_CreateLoginManagerRef")]
-    partial class CreateLoginManagerRef
+    [Migration("20220224210317_createLoginDB")]
+    partial class createLoginDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,12 +27,14 @@ namespace HotelManagmentRefactored.Migrations
                 {
                     b.Property<string>("user_name")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("user_name");
 
                     b.Property<string>("pass_word")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("pass_word");
 
                     b.HasKey("user_name");
 
@@ -43,12 +45,14 @@ namespace HotelManagmentRefactored.Migrations
                 {
                     b.Property<string>("user_name")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("user_name");
 
                     b.Property<string>("pass_word")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("pass_word");
 
                     b.HasKey("user_name");
 

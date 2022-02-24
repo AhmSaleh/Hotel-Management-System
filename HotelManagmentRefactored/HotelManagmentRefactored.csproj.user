@@ -7,6 +7,9 @@
     <Compile Update="UI Forms\FoodMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UI Forms\FoodMneuWithOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UI Forms\Frontend.cs">
       <SubType>Form</SubType>
     </Compile>

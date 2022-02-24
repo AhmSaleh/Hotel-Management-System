@@ -51,3 +51,4 @@ G:\ITI\C#\Day15\HotelManagmentRefactored\HotelManagmentRefactored\obj\Debug\net6
 G:\ITI\C#\Day15\HotelManagmentRefactored\HotelManagmentRefactored\obj\Debug\net6.0-windows\HotelManagmentRefactored.UI_Forms.FoodMenu.resources
 G:\ITI\C#\Day15\HotelManagmentRefactored\HotelManagmentRefactored\obj\Debug\net6.0-windows\HotelManagmentRefactored.UI_Forms.Frontend.resources
 G:\ITI\C#\Day15\HotelManagmentRefactored\HotelManagmentRefactored\obj\Debug\net6.0-windows\HotelManagmentRefactored.UI_Forms.FinalizePayment.resources
+G:\ITI\C#\Day15\HotelManagmentRefactored\HotelManagmentRefactored\obj\Debug\net6.0-windows\HotelManagmentRefactored.UI_Forms.FoodMneuWithOptions.resources

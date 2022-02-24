@@ -31,14 +31,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnNewReservation = new System.Windows.Forms.Button();
-            this.btnEditReservation = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.cbReservations = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnFoodMenu = new System.Windows.Forms.Button();
             this.btnFinalizeBtn = new System.Windows.Forms.Button();
             this.btnFoodAndMenu = new System.Windows.Forms.Button();
             this.cbSupplyStatus = new System.Windows.Forms.CheckBox();
@@ -75,12 +73,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbMonth = new System.Windows.Forms.ComboBox();
-            this.cbDay = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbYear = new System.Windows.Forms.TextBox();
+            this.tbBirthday = new System.Windows.Forms.TextBox();
             this.LastName = new System.Windows.Forms.Label();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -140,8 +133,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Controls.Add(this.btnNewReservation);
-            this.panel3.Controls.Add(this.btnEditReservation);
+            this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.label19);
@@ -151,45 +143,38 @@
             this.panel3.Size = new System.Drawing.Size(375, 548);
             this.panel3.TabIndex = 3;
             // 
-            // btnNewReservation
+            // btnAdd
             // 
-            this.btnNewReservation.ForeColor = System.Drawing.Color.Teal;
-            this.btnNewReservation.Location = new System.Drawing.Point(22, 503);
-            this.btnNewReservation.Name = "btnNewReservation";
-            this.btnNewReservation.Size = new System.Drawing.Size(328, 29);
-            this.btnNewReservation.TabIndex = 52;
-            this.btnNewReservation.Text = "New reservation";
-            this.btnNewReservation.UseVisualStyleBackColor = true;
-            // 
-            // btnEditReservation
-            // 
-            this.btnEditReservation.ForeColor = System.Drawing.Color.Teal;
-            this.btnEditReservation.Location = new System.Drawing.Point(22, 452);
-            this.btnEditReservation.Name = "btnEditReservation";
-            this.btnEditReservation.Size = new System.Drawing.Size(328, 29);
-            this.btnEditReservation.TabIndex = 51;
-            this.btnEditReservation.Text = "Edit existing Reservation";
-            this.btnEditReservation.UseVisualStyleBackColor = true;
+            this.btnAdd.ForeColor = System.Drawing.Color.Teal;
+            this.btnAdd.Location = new System.Drawing.Point(26, 403);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(328, 29);
+            this.btnAdd.TabIndex = 51;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.Location = new System.Drawing.Point(22, 401);
+            this.btnDelete.Location = new System.Drawing.Point(26, 493);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(328, 29);
             this.btnDelete.TabIndex = 50;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.btnUpdate.Location = new System.Drawing.Point(22, 350);
+            this.btnUpdate.Location = new System.Drawing.Point(26, 448);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(328, 29);
             this.btnUpdate.TabIndex = 48;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label19
             // 
@@ -213,7 +198,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.btnFoodMenu);
             this.panel2.Controls.Add(this.btnFinalizeBtn);
             this.panel2.Controls.Add(this.btnFoodAndMenu);
             this.panel2.Controls.Add(this.cbSupplyStatus);
@@ -236,16 +220,6 @@
             this.panel2.Size = new System.Drawing.Size(375, 548);
             this.panel2.TabIndex = 3;
             // 
-            // btnFoodMenu
-            // 
-            this.btnFoodMenu.ForeColor = System.Drawing.Color.Teal;
-            this.btnFoodMenu.Location = new System.Drawing.Point(29, 509);
-            this.btnFoodMenu.Name = "btnFoodMenu";
-            this.btnFoodMenu.Size = new System.Drawing.Size(328, 29);
-            this.btnFoodMenu.TabIndex = 47;
-            this.btnFoodMenu.Text = "Food and Menu";
-            this.btnFoodMenu.UseVisualStyleBackColor = true;
-            // 
             // btnFinalizeBtn
             // 
             this.btnFinalizeBtn.ForeColor = System.Drawing.Color.Teal;
@@ -255,6 +229,7 @@
             this.btnFinalizeBtn.TabIndex = 46;
             this.btnFinalizeBtn.Text = "Finalize Bill";
             this.btnFinalizeBtn.UseVisualStyleBackColor = true;
+            this.btnFinalizeBtn.Click += new System.EventHandler(this.btnFinalizeBtn_Click);
             // 
             // btnFoodAndMenu
             // 
@@ -265,11 +240,11 @@
             this.btnFoodAndMenu.TabIndex = 45;
             this.btnFoodAndMenu.Text = "Food and Menu";
             this.btnFoodAndMenu.UseVisualStyleBackColor = true;
+            this.btnFoodAndMenu.Click += new System.EventHandler(this.btnFoodAndMenu_Click);
             // 
             // cbSupplyStatus
             // 
             this.cbSupplyStatus.AutoSize = true;
-            this.cbSupplyStatus.Enabled = false;
             this.cbSupplyStatus.Location = new System.Drawing.Point(101, 436);
             this.cbSupplyStatus.Name = "cbSupplyStatus";
             this.cbSupplyStatus.Size = new System.Drawing.Size(158, 24);
@@ -291,7 +266,6 @@
             // cbCheckIn
             // 
             this.cbCheckIn.AutoSize = true;
-            this.cbCheckIn.Enabled = false;
             this.cbCheckIn.Location = new System.Drawing.Point(29, 404);
             this.cbCheckIn.Name = "cbCheckIn";
             this.cbCheckIn.Size = new System.Drawing.Size(93, 24);
@@ -618,7 +592,6 @@
             // 
             // rbStreet
             // 
-            this.rbStreet.Enabled = false;
             this.rbStreet.Location = new System.Drawing.Point(23, 385);
             this.rbStreet.Name = "rbStreet";
             this.rbStreet.Size = new System.Drawing.Size(328, 27);
@@ -635,7 +608,6 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Enabled = false;
             this.tbEmail.Location = new System.Drawing.Point(23, 327);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(328, 27);
@@ -652,7 +624,6 @@
             // 
             // tbPhone
             // 
-            this.tbPhone.Enabled = false;
             this.tbPhone.Location = new System.Drawing.Point(23, 263);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(328, 27);
@@ -699,12 +670,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbMonth);
-            this.groupBox1.Controls.Add(this.cbDay);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.tbYear);
+            this.groupBox1.Controls.Add(this.tbBirthday);
             this.groupBox1.Location = new System.Drawing.Point(8, 78);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(358, 83);
@@ -712,100 +678,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Birthday";
             // 
-            // cbMonth
+            // tbBirthday
             // 
-            this.cbMonth.FormattingEnabled = true;
-            this.cbMonth.Items.AddRange(new object[] {
-            "January ",
-            "February ",
-            "March ",
-            "April ",
-            "May ",
-            "June ",
-            "July ",
-            "August ",
-            "September ",
-            "October ",
-            "November ",
-            "December"});
-            this.cbMonth.Location = new System.Drawing.Point(9, 45);
-            this.cbMonth.Name = "cbMonth";
-            this.cbMonth.Size = new System.Drawing.Size(105, 28);
-            this.cbMonth.TabIndex = 11;
-            // 
-            // cbDay
-            // 
-            this.cbDay.FormattingEnabled = true;
-            this.cbDay.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cbDay.Location = new System.Drawing.Point(126, 45);
-            this.cbDay.Name = "cbDay";
-            this.cbDay.Size = new System.Drawing.Size(105, 28);
-            this.cbDay.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Month";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(126, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Day";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(242, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Year";
-            // 
-            // tbYear
-            // 
-            this.tbYear.Location = new System.Drawing.Point(242, 45);
-            this.tbYear.Name = "tbYear";
-            this.tbYear.Size = new System.Drawing.Size(105, 27);
-            this.tbYear.TabIndex = 9;
+            this.tbBirthday.Location = new System.Drawing.Point(17, 40);
+            this.tbBirthday.Name = "tbBirthday";
+            this.tbBirthday.Size = new System.Drawing.Size(328, 27);
+            this.tbBirthday.TabIndex = 28;
             // 
             // LastName
             // 
@@ -835,7 +713,7 @@
             // 
             // tbFirstName
             // 
-            this.tbFirstName.Location = new System.Drawing.Point(23, 45);
+            this.tbFirstName.Location = new System.Drawing.Point(23, 44);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(153, 27);
             this.tbFirstName.TabIndex = 0;
@@ -857,7 +735,7 @@
             // dataGridViewSearchResults
             // 
             this.dataGridViewSearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSearchResults.Location = new System.Drawing.Point(19, 78);
+            this.dataGridViewSearchResults.Location = new System.Drawing.Point(19, 87);
             this.dataGridViewSearchResults.Name = "dataGridViewSearchResults";
             this.dataGridViewSearchResults.RowHeadersWidth = 51;
             this.dataGridViewSearchResults.RowTemplate.Height = 29;
@@ -876,7 +754,7 @@
             // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(189, 29);
+            this.tbSearch.Location = new System.Drawing.Point(189, 38);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(759, 27);
             this.tbSearch.TabIndex = 18;
@@ -884,7 +762,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(192, 6);
+            this.label20.Location = new System.Drawing.Point(192, 15);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(53, 20);
             this.label20.TabIndex = 17;
@@ -986,12 +864,15 @@
             // 
             // Frontend
             // 
+            this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 623);
             this.Controls.Add(this.tabControl1);
             this.Name = "Frontend";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frontend";
+            this.Load += new System.EventHandler(this.Frontend_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1025,12 +906,6 @@
         private Label label2;
         private ComboBox cbGender;
         private GroupBox groupBox1;
-        private ComboBox cbMonth;
-        private ComboBox cbDay;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private TextBox tbYear;
         private Label LastName;
         private TextBox tbLastName;
         private Label label1;
@@ -1067,13 +942,10 @@
         private CheckBox cbSupplyStatus;
         private CheckBox cbSnedSms;
         private CheckBox cbCheckIn;
-        private Button btnNewReservation;
-        private Button btnEditReservation;
         private Button btnDelete;
         private Button btnUpdate;
         private Label label19;
         private ComboBox cbReservations;
-        private Button btnFoodMenu;
         private Button btnFinalizeBtn;
         private Button btnSearch;
         private TextBox tbSearch;
@@ -1086,5 +958,7 @@
         private ListBox roomOccupiedListBox;
         private Label label21;
         private DataGridView dataGridViewSearchResults;
+        private TextBox tbBirthday;
+        private Button btnAdd;
     }
 }

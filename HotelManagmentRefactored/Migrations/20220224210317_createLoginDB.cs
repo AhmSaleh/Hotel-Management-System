@@ -4,7 +4,7 @@
 
 namespace HotelManagmentRefactored.Migrations
 {
-    public partial class CreateLoginManagerRef : Migration
+    public partial class createLoginDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

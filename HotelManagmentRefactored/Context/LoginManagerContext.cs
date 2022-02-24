@@ -17,5 +17,40 @@ namespace HotelManagmentRefactored.Context
             optionsBuilder.UseSqlServer(
                 @"Server=.;Database=LOGIN_MANAGERRef;Trusted_Connection=True;"
             );
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<frontend>().HasKey(f => f.user_name);
+
+            modelBuilder
+                .Entity<frontend>()
+                .Property(f => f.user_name)
+                .HasColumnName("user_name")
+                .HasMaxLength(50)
+                .IsRequired();
+
+            modelBuilder
+                .Entity<frontend>()
+                .Property(f => f.pass_word)
+                .HasColumnName("pass_word")
+                .HasMaxLength(50)
+                .IsRequired();
+
+            modelBuilder.Entity<kitchen>().HasKey(f => f.user_name);
+
+            modelBuilder
+                .Entity<kitchen>()
+                .Property(f => f.user_name)
+                .HasColumnName("user_name")
+                .HasMaxLength(50)
+                .IsRequired();
+
+            modelBuilder
+                .Entity<kitchen>()
+                .Property(f => f.pass_word)
+                .HasColumnName("pass_word")
+                .HasMaxLength(50)
+                .IsRequired();
+        }
     }
 }

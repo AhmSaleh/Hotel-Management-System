@@ -25,12 +25,14 @@ namespace HotelManagmentRefactored.Migrations
                 {
                     b.Property<string>("user_name")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("user_name");
 
                     b.Property<string>("pass_word")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("pass_word");
 
                     b.HasKey("user_name");
 
@@ -41,12 +43,14 @@ namespace HotelManagmentRefactored.Migrations
                 {
                     b.Property<string>("user_name")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("user_name");
 
                     b.Property<string>("pass_word")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("pass_word");
 
                     b.HasKey("user_name");
 

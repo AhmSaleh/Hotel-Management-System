@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelManagmentRefactored.Entites
 {
-    internal class reservation
+    public class reservation
     {
         //[Id] [int] IDENTITY(1011,1) NOT NULL,
         [Key]
